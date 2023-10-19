@@ -28,7 +28,7 @@ class Elementor_AboutUs_Widget extends \Elementor\Widget_Base
         $this->start_controls_section(
 			'widget_content',
 			[
-				'label' => esc_html__( 'About Us content', 'textdomain' ),
+				'label' => esc_html__( 'About Us content', 'finalassignment' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -38,8 +38,8 @@ class Elementor_AboutUs_Widget extends \Elementor\Widget_Base
 			[
 				'label' => esc_html__( 'Section Name', 'finalassignment' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Default title', 'textdomain' ),
-				'placeholder' => esc_html__( 'Type your title here', 'textdomain' ),
+				'default' => esc_html__( 'Default title', 'finalassignment' ),
+				'placeholder' => esc_html__( 'Type your title here', 'finalassignment' ),
 			]
 		);
 		$this->add_responsive_control(
@@ -47,8 +47,8 @@ class Elementor_AboutUs_Widget extends \Elementor\Widget_Base
 			[
 				'label' => esc_html__( 'Title', 'finalassignment' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Default title', 'textdomain' ),
-				'placeholder' => esc_html__( 'Type your title here', 'textdomain' ),
+				'default' => esc_html__( 'Default title', 'finalassignment' ),
+				'placeholder' => esc_html__( 'Type your title here', 'finalassignment' ),
                 'label_block' => true,
 			]
 		);
@@ -74,7 +74,7 @@ class Elementor_AboutUs_Widget extends \Elementor\Widget_Base
         $this->add_control(
 			'button_url',
 			[
-				'label' => esc_html__( 'Button URL', 'textdomain' ),
+				'label' => esc_html__( 'Button URL', 'finalassignment' ),
 				'type' => \Elementor\Controls_Manager::URL,
 				'options' => [ 'url', 'is_external', 'nofollow' ],
 				'default' => [
@@ -92,8 +92,8 @@ class Elementor_AboutUs_Widget extends \Elementor\Widget_Base
 			[
 				'label' => esc_html__( 'Experience Number', 'finalassignment' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Default title', 'textdomain' ),
-				'placeholder' => esc_html__( 'Type your title here', 'textdomain' ),
+				'default' => esc_html__( 'Default title', 'finalassignment' ),
+				'placeholder' => esc_html__( 'Type your title here', 'finalassignment' ),
 			]
 		);
 

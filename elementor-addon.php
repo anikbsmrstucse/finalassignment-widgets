@@ -15,6 +15,8 @@ function finalassignment_elementor_addon( $widgets_manager ) {
 	require_once( __DIR__ . '/widgets/aboutus-widget.php' );
 	require_once( __DIR__ . '/widgets/section-header.php' );
 	require_once( __DIR__ . '/widgets/service-card.php' );
+	require_once( __DIR__ . '/widgets/achivement-widget.php' );
+	require_once( __DIR__ . '/widgets/recent-works.php' );
 
 
 	$widgets_manager->register( new \Elementor_Hero_Widget() );
@@ -22,6 +24,8 @@ function finalassignment_elementor_addon( $widgets_manager ) {
 	$widgets_manager->register( new \Elementor_AboutUs_Widget() );
 	$widgets_manager->register( new \Elementor_SectionHeader_Widget() );
 	$widgets_manager->register( new \Elementor_ServiceCard_Widget() );
+	$widgets_manager->register( new \Elementor_Achivement_Widget() );
+	$widgets_manager->register( new \Elementor_RecentWorks_Widget() );
 
 }
 add_action( 'elementor/widgets/register', 'finalassignment_elementor_addon' );
