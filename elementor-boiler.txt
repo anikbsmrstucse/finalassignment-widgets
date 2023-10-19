@@ -1,0 +1,34 @@
+<?php 
+
+class Elementor_AboutUs_Widget extends \Elementor\Widget_Base {
+
+    public function get_name(){
+        return 'aboutus-widget' ;
+    }
+
+    public function get_title() 
+    {
+        return 'AboutUs Widget';
+    }
+
+    public function get_icon()
+    {
+        return 'fa-user-group';
+    }
+
+    public function get_categories()
+    {
+        return ['first-category'];
+    }
+
+    protected function register_controls()
+    {
+
+    }
+
+    protected function render()
+    {
+
+    }
+
+}

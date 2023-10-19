@@ -12,9 +12,11 @@ function finalassignment_elementor_addon( $widgets_manager ) {
 
 	require_once( __DIR__ . '/widgets/breadcrum-widget.php' );
 	require_once( __DIR__ . '/widgets/hero-widget.php' );
+	require_once( __DIR__ . '/widgets/aboutus-widget.php' );
 
 	$widgets_manager->register( new \Elementor_Hero_Widget() );
 	$widgets_manager->register( new \Elementor_Breadcrum_Widget() );
+	$widgets_manager->register( new \Elementor_AboutUs_Widget() );
 
 }
 add_action( 'elementor/widgets/register', 'finalassignment_elementor_addon' );
