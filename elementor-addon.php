@@ -19,6 +19,8 @@ function finalassignment_elementor_addon( $widgets_manager ) {
 	require_once( __DIR__ . '/widgets/recent-works.php' );
 	require_once( __DIR__ . '/widgets/member-widget.php' );
 	require_once( __DIR__ . '/widgets/latest-post.php' );
+	require_once( __DIR__ . '/widgets/testemonial-widget.php' );
+	require_once( __DIR__ . '/widgets/shortcode-widget.php' );
 
 
 	$widgets_manager->register( new \Elementor_Hero_Widget() );
@@ -30,6 +32,8 @@ function finalassignment_elementor_addon( $widgets_manager ) {
 	$widgets_manager->register( new \Elementor_RecentWorks_Widget() );
 	$widgets_manager->register( new \Elementor_Member_Widget() );
 	$widgets_manager->register( new \Elementor_LatestPost_Widget() );
+	$widgets_manager->register( new \Elementor_Testimonials_Widget() );
+	$widgets_manager->register( new \Custom_Shortcode_Widget() );
 
 }
 add_action( 'elementor/widgets/register', 'finalassignment_elementor_addon' );
@@ -54,3 +58,5 @@ function add_elementor_widget_categories( $elements_manager ) {
 
 }
 add_action( 'elementor/elements/categories_registered', 'add_elementor_widget_categories' );
+
+
