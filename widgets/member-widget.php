@@ -72,6 +72,19 @@ class Elementor_Member_Widget extends \Elementor\Widget_Base
 			]
 		);
 
+        // add switcher for filter categorey
+        $this->add_control(
+			'show_category',
+			[
+				'label' => esc_html__( 'Show Category', 'finalassignment' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'finalassignment' ),
+				'label_off' => esc_html__( 'Hide', 'finalassignment' ),
+				'return_value' => 'yes',
+				'default' => 'yes',
+			]
+		);
+
         // it also show post according by date,name and title
         $this->add_control(
 			'filter_by',
@@ -83,6 +96,9 @@ class Elementor_Member_Widget extends \Elementor\Widget_Base
 					'senior-member' => esc_html__( 'Senior Member', 'finalassignment' ),
                     'junior-member' => esc_html__('Junior Member','finalassignment'),
 				],
+                'condition' => [
+                    'show_category' => 'yes',
+                ],
 			]
 		);
 
@@ -135,6 +151,7 @@ class Elementor_Member_Widget extends \Elementor\Widget_Base
         $order = $settings['order'];
         $order_by = $settings['order_by'];
         $filter_by = $settings['filter_by'];
+        $show_cat = $settings['show_category'];
         $desktop = $settings['desktop_column'];
         $tablet = $settings['tablet_column'];
         $mobile = $settings['mobile_column'];
@@ -157,14 +174,17 @@ class Elementor_Member_Widget extends \Elementor\Widget_Base
                      'posts_per_page' => $member,
                      'orderby' => $order_by,
                      'order' => $order,
-                     'tax_query' => array(
+                 );
+
+                 if ($show_cat == 'yes') {
+                    $query['tax_query'] = array(
                         array(
                             'taxonomy' => 'member_category', // Replace with the actual taxonomy name
                             'field'    => 'slug',     // Use 'slug', 'term_id', or 'name' depending on your needs
                             'terms'    => $filter_by, // Replace with the term you want to filter by
                         ),
-                    ),
-                 );
+                    );
+                }
      
                  $loop = new WP_Query($query);
                  

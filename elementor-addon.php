@@ -18,6 +18,7 @@ function finalassignment_elementor_addon( $widgets_manager ) {
 	require_once( __DIR__ . '/widgets/achivement-widget.php' );
 	require_once( __DIR__ . '/widgets/recent-works.php' );
 	require_once( __DIR__ . '/widgets/member-widget.php' );
+	require_once( __DIR__ . '/widgets/latest-post.php' );
 
 
 	$widgets_manager->register( new \Elementor_Hero_Widget() );
@@ -28,6 +29,7 @@ function finalassignment_elementor_addon( $widgets_manager ) {
 	$widgets_manager->register( new \Elementor_Achivement_Widget() );
 	$widgets_manager->register( new \Elementor_RecentWorks_Widget() );
 	$widgets_manager->register( new \Elementor_Member_Widget() );
+	$widgets_manager->register( new \Elementor_LatestPost_Widget() );
 
 }
 add_action( 'elementor/widgets/register', 'finalassignment_elementor_addon' );
